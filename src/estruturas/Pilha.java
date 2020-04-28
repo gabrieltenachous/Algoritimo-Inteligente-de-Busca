@@ -23,14 +23,13 @@ public class Pilha {
 	}
 
 	public Cidade desempilhar() {
-		if(!pilhaVazia()) {
-
-			return cidades[topo--];
-			
-		}else{
+		if (!pilhaVazia()) { 
+			return cidades[topo--]; 
+		} else {
 			System.out.println("A pílha já esta vazia");
+			return null;
 		}
-		}
+	}
 
 	public Cidade getTopo() {
 		return cidades[topo];
