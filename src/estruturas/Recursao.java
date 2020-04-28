@@ -10,7 +10,7 @@ public class Recursao {
 			funcao();
 		}
 	}
-	
+	//TESTE
 	public static void main(String args[]) {
 		Recursao r = new Recursao();
 		r.funcao();
