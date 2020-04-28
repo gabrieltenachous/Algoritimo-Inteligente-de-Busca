@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cidade {
+	
 	private String name;
-
 	private boolean visitado;
 	private List<Adjacente> adjacentes;
 
@@ -38,4 +38,10 @@ public class Cidade {
 	public void setVisitado(boolean visitado) {
 		this.visitado = visitado;
 	}
+
+	public List<Adjacente> getAdjacentes() {
+		return adjacentes;
+	}
+	
+	
 }
