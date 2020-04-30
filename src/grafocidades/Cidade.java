@@ -1,47 +1,53 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package grafocidades;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * @author Jones
+ */
 public class Cidade {
-	
-	private String name;
-	private boolean visitado;
-	private List<Adjacente> adjacentes;
+    private String nome;
+    private boolean visitado;
+    private List<Adjacente> adjacentes;
 
-	public Cidade() {
+    public Cidade(String nome) {
+        this.nome = nome;
+        visitado = false;
+        adjacentes = new ArrayList<Adjacente>();
+    }
+    
+    public void addCidadeAdjacente(Adjacente cidade) {
+        adjacentes.add(cidade);
+    }
 
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	public Cidade(String name) {
-		this.name = name;
-		visitado = false;
-		adjacentes = new ArrayList<Adjacente>();
-	}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-	public void addCidadeAdjacente(Adjacente cidade) {
-		adjacentes.add(cidade);
-	}
+    public boolean isVisitado() {
+        return visitado;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setVisitado(boolean visitado) {
+        this.visitado = visitado;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public boolean isVisitado() {
-		return visitado;
-	}
-
-	public void setVisitado(boolean visitado) {
-		this.visitado = visitado;
-	}
-
-	public List<Adjacente> getAdjacentes() {
-		return adjacentes;
-	}
-	
-	
+    public List<Adjacente> getAdjacentes() {
+        return adjacentes;
+    }
+    
+    
+    
 }
+	

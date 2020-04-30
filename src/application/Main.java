@@ -13,11 +13,11 @@ public class Main {
 		pilha.empilhar(mapa.getCampoLargo());
 		pilha.empilhar(mapa.getCanoinhas());
 		
-		System.out.println(pilha.getTopo().getName());
+		System.out.println(pilha.getTopo(). getNome());
 		
 		pilha.desempilhar();
 		
-		System.out.println(pilha.getTopo().getName());
+		System.out.println(pilha.getTopo().getNome());
 		
 	}
 
