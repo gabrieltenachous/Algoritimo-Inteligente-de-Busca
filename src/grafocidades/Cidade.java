@@ -1,53 +1,56 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grafocidades;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Jones
- */
 public class Cidade {
-    private String nome;
-    private boolean visitado;
-    private List<Adjacente> adjacentes;
+	private String nome;
+	private boolean visitado;
+	private List<Adjacente> adjacentes;
+	private int distanciaObjetivo;
 
-    public Cidade(String nome) {
-        this.nome = nome;
-        visitado = false;
-        adjacentes = new ArrayList<Adjacente>();
-    }
-    
-    public void addCidadeAdjacente(Adjacente cidade) {
-        adjacentes.add(cidade);
-    }
+	public Cidade(String nome,int distanciaObjetivo) {
+		this.nome = nome;
+		this.distanciaObjetivo = distanciaObjetivo;
 
-    public String getNome() {
-        return nome;
-    }
+		visitado = false;
+		adjacentes = new ArrayList<Adjacente>();
+	}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public int getDistanciaObjetivo() {
+		return distanciaObjetivo;
+	}
 
-    public boolean isVisitado() {
-        return visitado;
-    }
+	public void setDistanciaObjetivo(int distanciaObjetivo) {
+		this.distanciaObjetivo = distanciaObjetivo;
+	}
 
-    public void setVisitado(boolean visitado) {
-        this.visitado = visitado;
-    }
+	public void setAdjacentes(List<Adjacente> adjacentes) {
+		this.adjacentes = adjacentes;
+	}
 
-    public List<Adjacente> getAdjacentes() {
-        return adjacentes;
-    }
-    
-    
-    
+	public void addCidadeAdjacente(Adjacente cidade) {
+		adjacentes.add(cidade);
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public boolean isVisitado() {
+		return visitado;
+	}
+
+	public void setVisitado(boolean visitado) {
+		this.visitado = visitado;
+	}
+
+	public List<Adjacente> getAdjacentes() {
+		return adjacentes;
+	}
+
 }
-	
